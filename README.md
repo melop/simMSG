@@ -1,7 +1,7 @@
 # simMSG
 simMSG user manual: Predict the accuracy of MSG for your hybrid cross
 
-I.	Download
+I.	Download:
 Once you have downloaded MSGsimulator.tar.gz, to unzip and untar, type:
 
 	tar xvfz MSGsimulator.tar.gz
@@ -15,7 +15,7 @@ Inside this folder you will find the simMSG program folder, the installation she
 	simulateMSG.pl
 	example_simmsg_config.cfg
 
-II.	Installation
+II.	Installation:
 The installation tool has been tested on Ubuntu 12.04. Redhat types of Linux distributions (including CentOS) have a known issue with installing python2.7, a prerequisite for this installation tool. On these systems, please install python2.7 manually before executing the installation script. 
 
 The following instructions assume Ubuntu 12.04 Desktop version. 
@@ -40,7 +40,7 @@ In case automated installation fails, all dependency packages can be found in si
 After installation of these packages, you may need to update paths for python, R and perl in the runsimmsg.sh shell script.
 Installation on a server environment may be further complicated by security settings and permissions, in which case you should check with the system administrator.
 
-III.	Setting up the configuration file for simMSG
+III.	Setting up the configuration file for simMSG:
 simMSG has many parameters that go into the simulation (see Table at the end of the user manual) but many of these parameters have default values that can reasonably be used in most cases. 
 
 Users set parameters by editing the configuration file (.cfg file). We recommend copying the example configuration file (example_simmsg_config.cfg) to a new file name and editing this file. The parameters that must be specified by the user are:
@@ -62,7 +62,7 @@ All other parameters have either suggested ranges or default values, but can be 
 If you are running simMSG on a cluster, there are additional parameters that need to be specified in the configuration file (see last row Table 1). By default, simMSG is configured for a SLURM resource management system, but users can change the job submission format by changing templates found in:
  ./simMSG/msg/template/
 
-IV.	Running the pipeline 
+IV.	Running the pipeline: 
 Link or copy the two parental reference fasta files into the MSGsimulator directory (containing the simMSG program folder and simulateMSG.pl script). Make sure the configuration file for the simulation is also in this directory.
 To run the simulator, simply type from this directory: 
 
@@ -76,7 +76,7 @@ If you are running a large number of individuals, you may need to allow for more
 	
 	ulimit –u 126561
 
-V.	Output files
+V.	Output files:
 
 A)	If you have set save_files=0 (default)
 Three major summary files are output by simMSG: 
@@ -121,7 +121,7 @@ msg.chrLengths
 msgError*
 msgOut*
 
-VI.	Common errors
+VI.	Common errors:
 In our experience the most common errors include:
 1)	incorrect scaffold/chromosome name specified in the cfg file
 2)	different scaffold/chromosome name in the two input parental genomes
