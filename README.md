@@ -4,16 +4,16 @@ simMSG user manual: Predict the accuracy of MSG for your hybrid cross
 I.	Download
 Once you have downloaded MSGsimulator.tar.gz, to unzip and untar, type:
 
-tar xvfz MSGsimulator.tar.gz
+	tar xvfz MSGsimulator.tar.gz
 
 This will create a folder called MSGsimulator.
 
 Inside this folder you will find the simMSG program folder, the installation shell script, the perl script which executes the program, and an example configuration file:
 
-simMSG
-install.sh
-simulateMSG.pl
-example_simmsg_config.cfg
+	simMSG
+	install.sh
+	simulateMSG.pl
+	example_simmsg_config.cfg
 
 II.	Installation
 The installation tool has been tested on Ubuntu 12.04. Redhat types of Linux distributions (including CentOS) have a known issue with installing python2.7, a prerequisite for this installation tool. On these systems, please install python2.7 manually before executing the installation script. 
@@ -26,7 +26,7 @@ To install, first cd into the MSGsimulator directory:
 	
 If you have sudo privileges this will facilitate installation. Type:
 
-sudo bash install.sh
+	sudo bash install.sh
 
 The installation tool will first check if the required versions of python, perl, R and php are installed. If not, the apt-get command will be executed to install them from the Ubuntu repository. Then, the tool installs all required packages for python, perl, and R within the simMSG folder so as not to interfere with the user’s existing package settings. If successful, a file named “runsimmsg.sh” will be created in the same folder as install.sh. This shell script contains “export” commands pointing to the package directories. 
 
@@ -66,13 +66,13 @@ IV.	Running the pipeline
 Link or copy the two parental reference fasta files into the MSGsimulator directory (containing the simMSG program folder and simulateMSG.pl script). Make sure the configuration file for the simulation is also in this directory.
 To run the simulator, simply type from this directory: 
 
-bash runsimmsg.sh configuration_file.cfg
+	bash runsimmsg.sh configuration_file.cfg
 
 	To store the information printed to the screen during the run (which can contain important information for troubleshooting an unsuccessful run, see below) type:
 	
-bash runsimmsg.sh configuration_file.cfg > simMSG_out_log
+	bash runsimmsg.sh configuration_file.cfg > simMSG_out_log
 
-	If you are running a large number of individuals, you may need to allow for more processes per user for the hybrid genome generation step. To do this, before running simMSG enter:
+If you are running a large number of individuals, you may need to allow for more processes per user for the hybrid genome generation step. To do this, before running simMSG enter:
 	
 	ulimit –u 126561
 
