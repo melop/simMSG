@@ -8,12 +8,13 @@ Once you have downloaded MSGsimulator.tar.gz, to unzip and untar, type:
 
 This will create a folder called MSGsimulator.
 
-Inside this folder you will find the simMSG program folder, the installation shell script, the perl script which executes the program, and an example configuration file:
+Inside this folder you will find the simMSG program folder, the installation folder with the installation shell script, the perl script which executes the program, an example configuration file, and example input and results from a run of simMSG:
 
 	simMSG
-	install.sh
+	install
 	simulateMSG.pl
 	example_simmsg_config.cfg
+	example_results_simulation
 
 II.	Installation:
 The installation tool has been tested on Ubuntu 12.04. Redhat types of Linux distributions (including CentOS) have a known issue with installing python2.7, a prerequisite for this installation tool. On these systems, please install python2.7 manually before executing the installation script. 
@@ -22,7 +23,7 @@ The following instructions assume Ubuntu 12.04 Desktop version.
 
 To install, first cd into the MSGsimulator directory:
 
-	cd MSGsimulator 
+	cd MSGsimulator/install 
 	
 If you have sudo privileges this will facilitate installation. Type:
 
@@ -31,6 +32,11 @@ If you have sudo privileges this will facilitate installation. Type:
 The installation tool will first check if the required versions of python, perl, R and php are installed. If not, the apt-get command will be executed to install them from the Ubuntu repository. Then, the tool installs all required packages for python, perl, and R within the simMSG folder so as not to interfere with the user’s existing package settings. If successful, a file named “runsimmsg.sh” will be created in the same folder as install.sh. This shell script contains “export” commands pointing to the package directories. 
 
 Check the bwainstall.log and samtoolsinstall.log files to ensure that there are no errors.
+
+When the installation is finished and you have checked the error logs, return to the main MSGsimulator directory by typing:
+
+	cd ..
+
 
 If you do not have sudo privileges, enter:
 
