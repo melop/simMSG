@@ -68,7 +68,7 @@ To run the simulator, simply type from this directory:
 
 	bash runsimmsg.sh configuration_file.cfg
 
-	To store the information printed to the screen during the run (which can contain important information for troubleshooting an unsuccessful run, see below) type:
+To store the information printed to the screen during the run (which can contain important information for troubleshooting an unsuccessful run, see below) type:
 	
 	bash runsimmsg.sh configuration_file.cfg > simMSG_out_log
 
